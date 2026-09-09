@@ -2,6 +2,8 @@
 #include <string>
 using namespace std;
 
+int global = 8;
+
 void great(string name = "Students"){
   cout << "Hi " << name << endl;
 }
