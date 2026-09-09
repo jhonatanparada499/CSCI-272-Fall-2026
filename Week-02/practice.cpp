@@ -1,5 +1,10 @@
 #include <iostream>
+#include <string>
 using namespace std;
+
+void great(string name = "Students"){
+  cout << "Hi " << name << endl;
+}
 
 int main(){
   int nums[] = {1,2,3};
@@ -29,7 +34,8 @@ int main(){
   // common pattern to avoid undef behavior
   delete[] arr;
   arr = nullptr;
-
+  
+  great();
 
 
   return 0;
