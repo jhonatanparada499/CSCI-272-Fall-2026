@@ -48,6 +48,12 @@ int main(){
   
   great();
 
+  // vars values can be modified through funcs params
+  // implicetly converted to 'pass by reference'
+
+  int var = 15;
+  int* p_to_var = &var;
+  test(p_to_var); // var is now 10
 
   return 0;
 }
