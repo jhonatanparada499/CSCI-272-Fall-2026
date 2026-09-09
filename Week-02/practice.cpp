@@ -8,6 +8,15 @@ void great(string name = "Students"){
   cout << "Hi " << name << endl;
 }
 
+void test_pointer(int* thePointer){
+  *thePointer = 10;
+}
+
+// int** p = int*(*p)
+void test_ptr_to_ptr(int** thePointer){
+  *thePointer = &global;
+}
+
 int main(){
   int nums[] = {1,2,3};
   cout << *nums+1 << endl;
