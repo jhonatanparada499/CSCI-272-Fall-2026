@@ -29,7 +29,7 @@ int main(){
   cout << p << endl;
   cout << p << endl;
   delete p;
-  p = nullptr;
+  p = nullptr; // or p = null; p = 0;
 
   int size; 
   cin >> size;
