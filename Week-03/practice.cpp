@@ -8,11 +8,13 @@ T largeOf(T first, T second){
 
 int main(){
 
-  int a = 10, b = 20;
-  double c = 10, d = 20;
+  int i1 = 10, i2 = 20;
+  double d1 = 10, d2 = 20;
+  string s1 = "i1", s2 = "A";
 
-  cout << "int: " << largeOf(a,b) << endl;
-  cout << "double: " << largeOf(c,d) << endl;
+  cout << "Larger int: " << largeOf(i1,i2) << endl;
+  cout << "Larger double: " << largeOf(d1,d2) << endl;
+  cout << "Larger string: " << largeOf(s1,s2) << endl;
 
   return 0;
 }
