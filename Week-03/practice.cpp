@@ -1,10 +1,18 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 template <typename T>
 T largeOf(T first, T second){
   // using ternary operator
   return (first > second) ? first : second;
+}
+
+void printVector(const vector<int>& theVector){
+  for (const int& val : theVector){
+    cout << val << " ";
+  }
+    cout << endl;
 }
 
 int main(){
