@@ -3,6 +3,7 @@ using namespace std;
 
 template <typename T>
 T largeOf(T first, T second){
+  // using ternary operator
   return (first > second) ? first : second;
 }
 
