@@ -9,6 +9,7 @@ T largeOf(T first, T second){
 }
 
 void printVector(const vector<int>& theVector){
+  // const needed here for reading and match vector const
   for (const int& val : theVector){
     cout << val << " ";
   }
