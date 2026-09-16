@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
+#include <algorithm> //req by sort()
 using namespace std;
 
 int main(){
