@@ -19,7 +19,8 @@ int main(){
   v1.reserve(4);
   cout << v1.capacity() << endl;
 
-  for (auto it=v1.begin(); it!=v1.end(); ++it){
+  // auto it...
+  for (vector<int>::iterator it=v1.begin(); it!=v1.end(); ++it){
     cout << *it << " ";
   }
     cout << endl;
