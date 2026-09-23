@@ -1,17 +1,17 @@
 #include <iostream>
-// #include <vector>
-// #include <algorithm> //req by sort()
+#include <string>
 using namespace std;
 
 int main(){
-  string firstName;
-  string lastName;
-  string fullName, quote;
+  string firstName,
+    lastName,
+    fullName, quote;
 
-  getline(cin, quote);
   cout << "Full name enter: ";
   cin >> firstName >> lastName;
-  // cin.clear();
+  cout << "Enter quote: ";
+  // clear cin buffer bf reading line
+  getline(cin >> ws, quote);
 
   fullName = firstName + " " + lastName;
   cout << "Full Name: " << fullName << '\n';
