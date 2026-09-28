@@ -1,13 +1,33 @@
 #include <iostream>
 #include <string>
- // header to include char manipulation
+ // header to include char manipulation funcs
 #include <cctype>
 
 using namespace std;
 
-bool equalsIgnoreCase(const string& first, const string& second);
+bool equalsIgnoreCase(
+    const string& first,
+    const string& second);
 
 int main(){
+  string sentece = "The quick brown fox jumps over the laxy dog.";
+  string vowels = "aeiou";
+
+  size_t foundFirst = sentence.find_first_of(vowels);
+
+  if (foundFirst == string::npos) {
+    cout << "No vowel found" << endl;
+    return -1;
+  }
+
+  cout << "char found at: " << foundFirst << '\n';
+
+  string ageTxt = "25";
+  string gpaTxt = "3.75";
+  int age = stoi(ageTxt);
+  int gpa = stod(gpaTxt);
+  cout << age + gpa << '\n';
+
   string email;
   string passwd = "Hello";
   string passwd2 = "Hello";
