@@ -3,6 +3,8 @@
 
 using namespace std;
 
+bool equalsIgnoreCase(const string& first, const string& second);
+
 int main(){
   string email;
 
@@ -23,4 +25,18 @@ int main(){
   cout << "Domain: " << domain << '\n';
 
   return 0;
+}
+
+bool equalsIgnoreCase(const string& first, const string& second){
+  if (first.length() != second.length()) {
+    return false;
+  }
+
+  for (size_t i = 0; i < first.length(); i++) {
+    if (tolower(first[i]) != tolower(second[i])) {
+      return false;
+    }
+  }
+
+  return true;
 }
