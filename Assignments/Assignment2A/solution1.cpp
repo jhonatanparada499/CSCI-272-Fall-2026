@@ -10,10 +10,6 @@ int main() {
   menu.push_back("Beef Enchiladas");
   menu.push_back("Cauliflower Cheese");
 
-  // PERSONAL NOTE
-  // ints not accepted as string types
-  // in this context, the mem func of vector
-  // takes an iterator as first arg
   menu.insert(menu.begin() + 1, "Carbonara");
 
   menu.erase(menu.begin() + 3);
@@ -24,3 +20,8 @@ int main() {
 
   return 0;
 }
+
+// Reflection
+// ints are not accepted in insert,
+// rather the function takes an iterator
+// as first arg
