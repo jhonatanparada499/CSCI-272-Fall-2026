@@ -1,4 +1,9 @@
 // TemplateReceipt.cpp
+
+// Author: Jhonatan Parada Torres
+// Course: CSCI272-1-34936
+// Title: Assignment 2: Function Templates
+
 #include <cstdio>
 
 template<typename T>

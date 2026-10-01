@@ -1,3 +1,9 @@
+// TemplateBetween.cpp
+
+// Author: Jhonatan Parada Torres
+// Course: CSCI272-1-34936
+// Title: Assignment 2: Function Templates
+
 #include <iostream>
 #include <string>
 using namespace std;
