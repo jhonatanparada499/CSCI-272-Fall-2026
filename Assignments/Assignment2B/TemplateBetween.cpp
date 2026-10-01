@@ -4,7 +4,9 @@ using namespace std;
 
 template <typename T>
 bool isBetween(T value, T low, T high){
-  if ((low<=value) && (value<=high)) return true;
+  if ((low<=value) && (value<=high)){
+    return true;
+  }
   return false;
 }
 
