@@ -1,45 +1,20 @@
-#include <iostream>
+#include "Car.h"
+
+// #include <iostream>
 // #include <string>
 // #include <cctype>
 
 using namespace std;
 
-class Car{
-public:
-  // data members
-  string color;
-  string brand;
-  string model;
-  int year;
-
-  // default constructor
-  Car(){
-    color = "DNA";
-    brand = "DNA";
-    model = "DNA";
-    year = 0;
-  }
-
-   // func member
-
-  void startEngine(){
-    cout << "Engine started" << '\n';
-  }
-
-  void stopEngine(){
-    cout << "Engine stopped" << '\n';
-  }
-
-  void showInfo(){
-    cout << "Brand: " << brand << '\n';
-    cout << "Color: " << color << '\n';
-    cout << "Year: " << year << '\n';
-    cout << "Model: " << model << '\n';
-  }
-
-};
-
 int main(){
+  // defaul constructor
+  // pointer to Car
+  Car* pcar1 = new Car;
+  pcar1->startEngine(); // -> = (*pointer).member
+
+  // array of cars
+  Car mycars[20];
+
   Car myCar;
   myCar.brand = "BWM";
   myCar.model = "XS";
