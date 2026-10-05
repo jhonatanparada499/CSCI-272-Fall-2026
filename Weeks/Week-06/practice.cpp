@@ -45,6 +45,8 @@ int main(){
   myCar.model = "XS";
   myCar.color = "Red";
   myCar.year = 2024;
+
+  myCar.startEngine();
   
   return 0;
 }
