@@ -29,5 +29,10 @@ int main() {
   myCar.setInfo("Tesla", "Model X", 2026);
   myCar.showInfo();
 
+  // calls copy constructor
+  Car myCar2{myCar}; // or (myCar)
+  std::cout << "Mycar2 after copy constructor: " << '\n';
+  myCar2.showInfo();
+
   return 0;
 }
