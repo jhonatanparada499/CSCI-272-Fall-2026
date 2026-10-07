@@ -9,6 +9,12 @@ Car::Car(){
   year = 0;
 }
 
+void Car::showInfo(){
+    std::cout << "Brand: " << brand << '\n';
+    std::cout << "Color: " << color << '\n';
+    std::cout << "Year: " << year << '\n';
+    std::cout << "Model: " << model << '\n';
+}
 
 int main() {
   // defaul constructor

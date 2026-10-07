@@ -51,12 +51,7 @@ public:
     year = theYear;
   }
 
-  void showInfo(){
-    std::cout << "Brand: " << brand << '\n';
-    std::cout << "Color: " << color << '\n';
-    std::cout << "Year: " << year << '\n';
-    std::cout << "Model: " << model << '\n';
-  }
+  void showInfo();
 
 };
 
