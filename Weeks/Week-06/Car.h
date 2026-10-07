@@ -1,3 +1,8 @@
+// declaring and def guard headers
+// to prevent double inclusion of this file
+#ifndef CAR_H
+#define CAR_H
+
 #include <iostream>
 #include <string>
 
@@ -58,3 +63,5 @@ public:
   }
 
 };
+
+#endif
