@@ -15,13 +15,9 @@ private:
   int year;
 
 public:
-  // default constructor
-  Car(){
-    color = "DNA";
-    brand = "DNA";
-    model = "DNA";
-    year = 0;
-  }
+  // declaring to def later in practice.cpp
+  // error if skipped
+  Car(); 
 
   // copy constructor
   Car(const Car& otherCar){
