@@ -41,6 +41,15 @@ public:
     std::cout << "Engine stopped" << '\n';
   }
 
+  void setInfo(std::string theBrand,
+               std::string theColor,
+               int theYear
+               ){
+    color = theColor;
+    brand = theBrand;
+    year = theYear;
+  }
+
   void showInfo(){
     std::cout << "Brand: " << brand << '\n';
     std::cout << "Color: " << color << '\n';
