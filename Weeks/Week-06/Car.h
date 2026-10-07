@@ -3,15 +3,13 @@
 
 class Car{
 private:
-  std::string a_private;
-
-public:
   // data members
   std::string color{"Unknown"}; // direct list initialization
   std::string brand;
   std::string model;
   int year;
 
+public:
   // default constructor
   Car(){
     color = "DNA";
