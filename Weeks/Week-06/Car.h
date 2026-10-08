@@ -45,10 +45,10 @@ public:
   }
 
   void setInfo(std::string theBrand,
-               std::string theColor,
+               std::string theModel,
                int theYear
                ){
-    color = theColor;
+    model = theModel;
     brand = theBrand;
     year = theYear;
   }
