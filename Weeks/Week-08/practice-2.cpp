@@ -22,6 +22,42 @@ void displayCinFlags() {
 }
 
 int main() {
+
+  int age;
+  while (true) {
+    cout << "Enter age: ";
+    if (!(cin >> age)) {
+      cerr << "Bad input. Try again." << '\n';
+      continue;
+    }
+    cout << "Valid. Bye." << '\n';
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    break;
+  }
+
+  istringstream input3("ABCDEFGHILMNOPQRSWZYZ");
+
+  // write()
+  cout << "first 10 letters: ";
+  cout.write("ABCDEFGHILMNOPQRSWZYZ", 10).put('\n');
+
+  const int SIZE = 80;
+  char buffer[SIZE];
+
+  // unformatted read()
+  // read next 20 characters
+  input3.read(buffer, 20);
+
+  // how many chars were extracted
+  streamsize count = input3.gcount();
+
+  cout << "First read: ";
+  cout.write(buffer, count).put('\n');
+
+  cout << "chars read: " << count << '\n';
+
+  displayCinFlags();
+
   string inString{"Alice 20"};
 
   istringstream test1(inString);
