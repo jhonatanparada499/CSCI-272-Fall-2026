@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>  // for numeric_limits
 #include <sstream> // for istringstream type
 #include <string>
 
@@ -19,8 +20,28 @@ int main() {
 
   if (!(test1 >> p1.name >> p1.age)) {
     cerr << "Error: Invalid data type" << endl;
+    return -1;
   }
 
   cout << p1.name << '\n';
   cout << p1.age << '\n';
+
+  char aChar;
+  cout << "Enter char: ";
+
+  if (!(cin.get(aChar))) {
+    cerr << "Error: Invalid data type" << endl;
+    return -1;
+  }
+
+  // clearing buffer
+  cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+  cout << "Etnered: " << aChar << '\n';
+
+  string fullname;
+  cout << "Full name: ";
+  getline(cin, fullname);
+
+  cout << "Entered Full name: " << fullname << '\n';
 }
