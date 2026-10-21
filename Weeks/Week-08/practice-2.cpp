@@ -11,6 +11,16 @@ public:
   int age;
 };
 
+void displayCinFlags() {
+  // now bool vals are printed in words
+  cout << boolalpha;
+
+  cout << cin.rdstate() << '\n';
+  cout << cin.fail() << '\n';
+  cout << cin.eof() << '\n';
+  cout << cin.bad() << '\n'; // serious IO error
+}
+
 int main() {
   string inString{"Alice 20"};
 
