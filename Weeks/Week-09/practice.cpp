@@ -65,19 +65,11 @@ bool isValidPhoneNumber(const string &input) {
   const int PHONE_NUMBER_LENGTH = 10;
   string digits;
 
-  if (input[input.find_first_of('(')] != '(') {
-    cout << input[input.find_first_of('(')] << '\n';
-    return false;
+  for (const int curr : input){
+    if (isdigit(static_cast<unsigned char>(curr))) {
+      digits += curr;
+    }
   }
 
-  if (input[input.find_first_of('(') + 4] != ')') {
-    return false;
-  }
-
-  // validate spaces and dash
-  // validates char to int
-  // char aChar = '1';
-  // isdigit(static_cast<unsigned char>(aChar))
-
-  return true;
+  return digits.length() == PHONE_NUMBER_LENGTH;
 }
