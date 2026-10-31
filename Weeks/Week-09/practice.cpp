@@ -39,6 +39,7 @@ int main() {
   // check for input
   // if (!(iss >> number)) {
   //   cout << "Invalid input" << '\n';
+  //   return -1;
   // }
   //
   // // remove extra whitespace
