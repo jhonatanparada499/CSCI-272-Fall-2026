@@ -7,6 +7,9 @@
 
 using namespace std;
 
+const int PHONE_NUMBER_LENGTH = 10;
+const int AREA_CODE_LENGTH = 3;
+
 bool isValidPhoneNumber(const string &input);
 
 int main() {
@@ -26,7 +29,7 @@ int main() {
   string areaCode(
       phone.substr(
       phone.find_first_of('(') + 1,
-      3
+      AREA_CODE_LENGTH
     )
   );
 
@@ -62,7 +65,6 @@ int main() {
 * Strips the symbols and spaces and counts the digits
 */
 bool isValidPhoneNumber(const string &input) {
-  const int PHONE_NUMBER_LENGTH = 10;
   string digits;
 
   for (const int curr : input){
