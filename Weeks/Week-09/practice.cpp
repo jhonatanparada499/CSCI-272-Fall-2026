@@ -65,6 +65,17 @@ int main() {
 * Strips the symbols and spaces and counts the digits
 */
 bool isValidPhoneNumber(const string &input) {
+  // input doesn't contain '(' or ')'
+  if (input.find('(') == string::npos ||
+      input.find(')') == string::npos) {
+    return false;
+  }
+
+  // input doesn't contain '-'
+  if (input.find('-') == string::npos) {
+    return false;
+  }
+
   string digits;
 
   for (const int curr : input){
