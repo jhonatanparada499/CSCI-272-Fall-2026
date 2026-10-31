@@ -58,7 +58,12 @@ int main() {
   // }
 }
 
+/**
+* Strips the symbols and spaces and counts the digits
+*/
 bool isValidPhoneNumber(const string &input) {
+  const int PHONE_NUMBER_LENGTH = 10;
+  string digits;
 
   if (input[input.find_first_of('(')] != '(') {
     cout << input[input.find_first_of('(')] << '\n';
