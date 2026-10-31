@@ -19,7 +19,7 @@ int main() {
   getline(cin, phone);
 
   if (!(isValidPhoneNumber(phone))) {
-    cout << "Is not valid phone number" << '\n';
+    cout << "Invalid phone number format" << '\n';
     return -1;
   }
 
