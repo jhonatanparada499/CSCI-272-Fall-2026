@@ -25,8 +25,8 @@ int main() {
 
   string areaCode(
       phone.substr(
-        phone.find_first_of('(') + 1,
-        phone.find_last_of(')') - 1
+      phone.find_first_of('(') + 1,
+      3
     )
   );
 
