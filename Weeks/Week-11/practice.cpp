@@ -127,8 +127,9 @@ int main() {
     string name;
     double balance;
 
-    row >> account >> comma 
-      >> name >> comma >> balance;
+    row >> account >> comma;
+    getline(row, name, ',');
+    row >> balance;
 
     // validate csv row
     // ...
