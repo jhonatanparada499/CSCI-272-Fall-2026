@@ -118,6 +118,7 @@ int main() {
   // skip header of csv
   getline(inFileCSV, line);
 
+  // prints each record in csv file
   while (getline(inFileCSV, line)) {
     istringstream row(line);
 
