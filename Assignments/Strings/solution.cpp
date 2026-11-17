@@ -2,6 +2,7 @@
  * solution.cpp
  */
 
+#include <cstddef>
 #include <iostream>
 
 using namespace std;
@@ -19,12 +20,30 @@ int main() {
   cout << "Last char: " << fullName[fullName.length() - 1] << '\n';
 
   // add prefix
-  fullName = "Mr. " + fullName;
+  fullName = "Mr./Ms. " + fullName;
 
   // add suffix
   fullName += " Jr.";
 
   cout << fullName << '\n';
+
+  // part 2
+  string sentence;
+  cout << "Enter sentence: ";
+  getline(cin, sentence);
+
+  string word;
+  cout << "Enter word to find: ";
+  cin >> word;
+
+  int wordIndex = sentence.find(word);
+  if (wordIndex == -1) {
+    cout << "Word not found" << '\n';
+  } else {
+    cout << wordIndex << '\n';
+  }
+
+  // part 3
 
   // part 4
   int num;
