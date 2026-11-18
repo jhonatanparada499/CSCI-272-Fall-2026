@@ -2,7 +2,6 @@
  * solution.cpp
  */
 
-#include <cstddef>
 #include <iostream>
 
 using namespace std;
