@@ -72,8 +72,8 @@ int main() {
         break;
       }
     }
+    cout << "Strings are equal (case-insensitive)" << '\n';
   }
-  cout << "Strings are equal (case-insensitive)" << '\n';
 
   // part 4
   string sNum;
