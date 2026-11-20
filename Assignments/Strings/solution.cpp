@@ -48,7 +48,7 @@ int main() {
   if (wordIndex == string::npos) {
     cout << "Word not found" << '\n';
   } else {
-    cout << wordIndex << '\n';
+    cout << "Word index: " << wordIndex << '\n';
   }
 
   // extra credit (number of spaces in sentence)
@@ -59,6 +59,9 @@ int main() {
     }
   }
   cout << "Spaces: " << spaceCount << '\n';
+
+  // extra credit (count vowels in sentence)
+  cout << "Vowels: " << countVowels(sentence) << '\n';
 
   // part 3
   string word1, word2;
