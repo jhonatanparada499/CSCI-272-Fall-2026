@@ -13,6 +13,8 @@
 
 using namespace std;
 
+int countVowels(const string &theString);
+
 int main() {
   // asks name
   string fullName;
@@ -86,4 +88,17 @@ int main() {
   cout << "Multiplication: " << result << '\n';
 
   return 0;
+}
+
+int countVowels(const string &theString) {
+  int vowels = 0;
+
+  for (const char &c : theString) {
+    if (tolower(c) == 'a' || tolower(c) == 'e' || tolower(c) == 'i' ||
+        tolower(c) == 'o' || tolower(c) == 'u') {
+      ++vowels;
+    }
+  }
+
+  return vowels;
 }
