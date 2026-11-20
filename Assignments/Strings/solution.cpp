@@ -68,15 +68,20 @@ int main() {
   cout << "Enter two words: ";
   cin >> word1 >> word2;
 
+  bool isEqual = true;
   if (word1.length() != word2.length()) {
     cout << "Strings are not equal (case-insensitive)" << '\n';
   } else {
     for (int i = 0; i < word1.length(); ++i) {
       if (tolower(word1[i]) != tolower(word2[i])) {
+        isEqual = false;
         cout << "Strings are not equal (case-insensitive)" << '\n';
         break;
       }
     }
+  }
+
+  if (isEqual) {
     cout << "Strings are equal (case-insensitive)" << '\n';
   }
 
