@@ -1,5 +1,5 @@
-#include <iomanip>
 #include <fstream>
+#include <iomanip>
 #include <iostream>
 #include <limits>
 
@@ -15,15 +15,15 @@ enum class RequestType {
 };
 
 // get valid menu choice
-RequestType getRequest(){
+RequestType getRequest() {
   int choice;
 
   while (true) {
     cout << "1 Zero balances" << '\n'
-      << "2 Credit balances (negative)" << '\n'
-      << "3 Debit balances (positive)" << '\n'
-      << "4 End" << '\n'
-      << "Choice: ";
+         << "2 Credit balances (negative)" << '\n'
+         << "3 Debit balances (positive)" << '\n'
+         << "4 End" << '\n'
+         << "Choice: ";
 
     if (!(cin >> choice) && (cin.eof() || cin.bad())) {
       cout << "Invalid input, try again." << '\n';
@@ -44,18 +44,15 @@ RequestType getRequest(){
 }
 
 // determines if a balance matches the requested category
-bool shouldDisplay(RequestType request, double balance){
-  return (request == RequestType::ZERO && balance == 0.00)
-    || (request == RequestType::CREDIT && balance < 0.00)
-    || (request == RequestType::DEBIT && balance > 0.00);
+bool shouldDisplay(RequestType request, double balance) {
+  return (request == RequestType::ZERO && balance == 0.00) ||
+         (request == RequestType::CREDIT && balance < 0.00) ||
+         (request == RequestType::DEBIT && balance > 0.00);
 }
 
-void outputLine (int account, const string& name, double balance){
-  cout << left << setw(10) << account
-               << setw(15) << name
-      << right << setw(12) << fixed << setprecision(2)
-                              << balance
-                              << '\n';
+void outputLine(int account, const string &name, double balance) {
+  cout << left << setw(10) << account << setw(15) << name << right << setw(12)
+       << fixed << setprecision(2) << balance << '\n';
 }
 
 int main() {
@@ -69,6 +66,8 @@ int main() {
     inFile.clear();
 
     // mv reading pos to beg
+    // ios::beg is the starting anchor
+    // 0 is the displacement
     inFile.seekg(0, ios::beg);
     if (!inFile) {
       cerr << "error: couldn't return to start of file." << '\n';
@@ -105,9 +104,9 @@ int main() {
   ofstream outFile(OUTFILENAMECSV);
 
   outFile << "account,name,balance" << '\n'
-    << "100,Ana Lopez,125.50" << '\n'
-    << "200,Ben Chen,-40.00" << '\n'
-    << "300,Avijit Roy,-999.99" << '\n';
+          << "100,Ana Lopez,125.50" << '\n'
+          << "200,Ben Chen,-40.00" << '\n'
+          << "300,Avijit Roy,-999.99" << '\n';
 
   outFile.close();
 
@@ -139,11 +138,8 @@ int main() {
 
     // validate extra content with !row.eof()
 
-    cout << account << " | "
-      << name << " | "
-      << balance << '\n';
+    cout << account << " | " << name << " | " << balance << '\n';
   }
-
 
   return 0;
 }
